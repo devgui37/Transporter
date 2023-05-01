@@ -9,6 +9,7 @@ from scipy.optimize import linprog
 import numpy as np
 import re
 
+
 def import_data(chemin: str) -> pd.DataFrame:
     """Importe un fichier CSV.
 
@@ -22,7 +23,6 @@ def import_data(chemin: str) -> pd.DataFrame:
     # importation
     data = pd.read_csv(chemin, index_col=0)
     return data
-
 
 
 def _sup_doublons(data: pd.DataFrame) -> pd.DataFrame:
@@ -255,6 +255,7 @@ def livraison(data: pd.DataFrame) -> pd.DataFrame:
         index=np.array(range(1, len(_modif_data(data)["produit"]) + 1)),
     )
     return livraison
+
 
 def cout(data: pd.DataFrame) -> pd.DataFrame:
     cout = pd.DataFrame(
