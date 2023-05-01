@@ -14,10 +14,11 @@ from lib.lib_transport import (
     _a_eq,
     _resolution,
     livraison,
-    import_data
+    import_data,
 )
 
 np.random.seed(1234)
+
 
 def test_import():
     import_data("data_test.csv")

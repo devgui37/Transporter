@@ -6,9 +6,11 @@ Test d'intégration de l'application.
 import pandas as pd
 from subprocess import run
 
+
 def test_commande_total_cout():
     resultat = run(
-        ["python", "app.py", "total-cout", "--chemin", "data_test.csv"], capture_output=True
+        ["python", "app.py", "total-cout", "--chemin", "data_test.csv"],
+        capture_output=True,
     )
     assert (
         resultat.stdout.decode("ISO-8859-1")
@@ -18,14 +20,16 @@ def test_commande_total_cout():
 
 def test_commande_total_quantite():
     resultat = run(
-        ["python", "app.py", "total-quantite", "--chemin",  "data_test.csv"], capture_output=True
+        ["python", "app.py", "total-quantite", "--chemin", "data_test.csv"],
+        capture_output=True,
     )
     assert resultat.stdout.decode("ISO-8859-1") == "La quantité livré est 30.0.\r\n"
 
 
 def test_commande_resultat_client():
     resultat = run(
-        ["python", "app.py", "resultat-client", "--chemin",  "data_test.csv"], capture_output=True
+        ["python", "app.py", "resultat-client", "--chemin", "data_test.csv"],
+        capture_output=True,
     )
     assert resultat.stdout.decode("latin") == (
         "                                   Résultat                                    \r\n"
@@ -41,7 +45,7 @@ def test_commande_resultat_client():
 
 def test_commande_resultat_entrepot():
     resultat = run(
-        ["python", "app.py", "resultat-entrepot", "--chemin",  "data_test.csv"],
+        ["python", "app.py", "resultat-entrepot", "--chemin", "data_test.csv"],
         capture_output=True,
     )
     assert resultat.stdout.decode("latin") == (
@@ -56,33 +60,19 @@ def test_commande_resultat_entrepot():
     )
 
 
-
 def test_graphe1():
     run(
-        [
-            "python",
-            "app.py",
-            "representation",
-            "--chemin",
-            "data_test.csv"
-        ],
-        capture_output=True
+        ["python", "app.py", "representation", "--chemin", "data_test.csv"],
+        capture_output=True,
     )
-    
+
     assert True
-    
+
+
 def test_graphe2():
     resultat = run(
-        [
-            "python",
-            "app.py",
-            "representation-entrepot",
-            "--chemin",
-            "data_test.csv"
-        ],
-        capture_output=True
+        ["python", "app.py", "representation-entrepot", "--chemin", "data_test.csv"],
+        capture_output=True,
     )
-    
-    assert resultat.stdout.decode("latin") == (
-        "Numéro de l'entrepot: "
-    )
+
+    assert resultat.stdout.decode("latin") == ("Numéro de l'entrepot: ")

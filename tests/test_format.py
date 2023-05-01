@@ -48,8 +48,10 @@ def test_entrepot_res():
     assert table.columns[3]._cells == ["2", "1"]
     assert table.columns[4]._cells == ["[1, 2]", "[2]"]
 
+
 def test_total_res():
-     assert total_res(data) == 30.0
+    assert total_res(data) == 30.0
+
 
 def test_total_cout():
-     assert total_cout(data) == 60.0
+    assert total_cout(data) == 60.0

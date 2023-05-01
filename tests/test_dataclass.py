@@ -2,6 +2,7 @@ from lib.lib_dataclass import Verif_Chemin, Verif_Data
 import pytest
 import pandas as pd
 
+
 def test_VF_class():
     chemin_csv = Verif_Chemin("/chemin/vers/mon_fichier.csv")
     assert isinstance(chemin_csv, Verif_Chemin)
@@ -14,7 +15,6 @@ def test_VF_class():
 
     with pytest.raises(ValueError):
         Verif_Chemin("/chemin/vers/mon_fichier_csv")
-        
 
 
 def test_VD_class():
