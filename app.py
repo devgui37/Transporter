@@ -15,14 +15,14 @@ def callback():
     """
     Merci d'utiliser notre application !
 
-    Pour lancer l'application vous avez seulement besoin d'écrire dans la console: >>> python app.py
+    Pour lancer l'application vous avez seulement besoin d'écrire dans la console: >>> python application.py
 
     Après avoir donné le nom de votre fichier.
 
-    Vous pouvez choisir entre 7 commandes différentes. Ces commandes sont disponibles dans l'aide ci-dessous.
+    Vous pouvez choisir entre 8 commandes différentes. Ces commandes sont disponibles dans l'aide ci-dessous.
 
     Si vous voulez utilisez une des commandes seule il faut préciser dans la console le fichier que vous voulez utiliser:
-    Exemple: >>> python app.py total-cout nom_de_fichier.csv
+    Exemple: >>> python application.py total-cout nom_de_fichier.csv
     """
 
 

@@ -21,7 +21,6 @@ class QuitScreen(Screen):
         )
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
-        """Action suivant l'interaction avec les boutons."""
         if event.button.id == "quit":
             self.app.exit()
         else:
@@ -55,7 +54,6 @@ class ResultScreen(Screen):
         )
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
-        """Action suivant l'interaction avec les boutons."""
         if event.button.id == "quit":
             self.app.exit()
         else:
@@ -64,7 +62,6 @@ class ResultScreen(Screen):
 
 
 class MyApp(App):
-    """L'application qui permet d'executer les différentes commandes."""
 
     CSS_PATH = "aes.css"
 
@@ -104,7 +101,6 @@ class MyApp(App):
 
 
     def on_directory_tree_file_selected(self, event: DirectoryTree.FileSelected):
-        """Après sélection d'un fichier."""
         self.chemin = event.path
 
     def on_input_changed(self, event: Input.Changed) -> None:  
@@ -143,7 +139,7 @@ class MyApp(App):
 
     
     def action_request_quit(self) -> None:
-        """Lorsque l'utilisateur appuie sur la touche Q ou clique sur "Quitter l'application", lance l'écran qui permet de quitter l'application."""
+        """Lorsque l'utilisateur appuie sur la touche Q, lance l'écran qui permet de quitter l'application."""
         self.push_screen(QuitScreen())
 
 
