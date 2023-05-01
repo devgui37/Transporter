@@ -1,4 +1,4 @@
-# Sujet 06 : transport optimal
+# Transporter
 
 Le but de ce projet est de minimiser le coût de transport d'une entreprise disposant de plusieurs entrepots cherchant à deservir plusieurs clients.
 
